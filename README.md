@@ -1,1 +1,1 @@
-# Dicover_Kanishk
+# Discover_Kanishk
