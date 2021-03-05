@@ -5,7 +5,7 @@ class home extends StatefulWidget {
 }
 
 class _homeState extends State<home> {
-  var bg = 'images/home.png';
+  var bg = 'images/page1.1.png';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,39 +21,29 @@ class _homeState extends State<home> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              RaisedButton.icon(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/3rdpage');
-                },
-                label: Text(''),
-                icon: Icon(Icons.audiotrack,
-                  color: Colors.white,
-                ),
-                color: Colors.blueAccent[100],
-                splashColor: Colors.greenAccent,
-              ),
               Center(
                 child: FlatButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/2ndpage');
                   },
-                  color: Colors.pinkAccent[100],
+                  color: Colors.black12,
                   splashColor: Colors.deepPurpleAccent,
                   child : Text("DISCOVER ME!",
                     style: TextStyle(
                         fontFamily: 'Montserrat',
-                        color: Colors.white
+                        color: Colors.white,
+                      fontSize: 20,
                     ),
                   ),
                 ),
               ),
               FlatButton.icon(
-                onLongPress: () {
+                onPressed: () {
                   setState(() {
                     bg = 'images/home.png';
                   });
                 },
-                onPressed: () {
+                onLongPress: () {
                   setState(() {
                     bg = 'images/page1.1.png';
                   });
